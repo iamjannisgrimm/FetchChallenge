@@ -72,7 +72,6 @@ struct Ingredient: Decodable {
     var measurement: String
 }
 
-//No reason it's outside of the scope
 struct DynamicCodingKeys: CodingKey {
     var stringValue: String
     var intValue: Int?

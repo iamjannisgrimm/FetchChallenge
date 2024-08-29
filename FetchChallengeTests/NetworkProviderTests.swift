@@ -4,10 +4,7 @@
 //
 //  Created by Jannis Grimm on 8/27/24.
 //
-
-import Testing
 import XCTest
-
 @testable import FetchChallenge
 
 class NetworkProviderTests: XCTestCase {

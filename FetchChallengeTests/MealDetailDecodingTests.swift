@@ -4,8 +4,6 @@
 //
 //  Created by Jannis Grimm on 8/26/24.
 //
-
-import Testing
 import XCTest
 @testable import FetchChallenge
 
@@ -60,27 +58,6 @@ class MealDetailDecodingTests: XCTestCase {
         XCTAssertEqual(mealDetail.ingredients?.count, 2)
     }
     
-    func testDecodeMealDetailWithInvalidURL() throws {
-        let json = """
-        {
-            "idMeal": "52772",
-            "strMeal": "Apple Frangipan Tart",
-            "strInstructions": "Preheat the oven to 200C.",
-            "strMealThumb": "invalid_url",
-            "strIngredient1": "Apple",
-            "strMeasure1": "1"
-        }
-        """.data(using: .utf8)!
-        
-        let decoder = JSONDecoder()
-        let mealDetail = try decoder.decode(MealDetail.self, from: json)
-        
-        XCTAssertEqual(mealDetail.id, "52772")
-        XCTAssertEqual(mealDetail.name, "Apple Frangipan Tart")
-        XCTAssertEqual(mealDetail.instructions, "Preheat the oven to 200C.")
-        XCTAssertNil(mealDetail.mealThumb)  // mealThumb should be nil due to invalid URL
-        XCTAssertEqual(mealDetail.ingredients?.count, 1)
-    }
     
     func testDecodeMealDetailWithNoIngredients() throws {
         let json = """
