@@ -24,7 +24,7 @@ struct MealsView: View {
             }.navigationTitle(viewModel.selectedCategory.rawValue)
             .animation(.bouncy, value: viewModel.noMeals)
 
-        }.task { //As soon as view dissapears it cancels all tasks
+        }.task {
             await viewModel.fetchMeals()
         }
     }
