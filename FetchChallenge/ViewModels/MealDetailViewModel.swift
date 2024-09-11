@@ -5,7 +5,8 @@
 //  Created by Jannis Grimm on 8/22/24.
 //
 
-import Foundation
+import SwiftUI
+import Observation
 
 @Observable class MealDetailViewModel {
     var mealDetails: MealDetail? = nil

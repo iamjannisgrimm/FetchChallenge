@@ -14,44 +14,45 @@ struct ImageView: View {
     public var cornerRadius: CGFloat
     
     var body: some View {
-        if let url = url {
-            AsyncImage(url: url) { phase in
-                switch phase {
-                case .empty:
-                    ProgressView()
-                        .frame(width: width, height: height)
-                        .frame(maxWidth: width == nil ? .infinity : nil)
-                        .clipShape(.rect(cornerRadius: cornerRadius))
-                case .success(let image):
-                    image.resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(width: width, height: height)
-                        .frame(maxWidth: width == nil ? .infinity : nil)
-                        .clipShape(.rect(cornerRadius: cornerRadius))
-                case .failure:
-                    Image("NoImage")
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(width: width, height: height)
-                        .frame(maxWidth: width == nil ? .infinity : nil)
-                        .clipShape(.rect(cornerRadius: cornerRadius))
-                @unknown default:
-                    Image("NoImage")
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(width: width, height: height)
-                        .frame(maxWidth: width == nil ? .infinity : nil)
-                        .clipShape(.rect(cornerRadius: cornerRadius))
+        Group {
+            if let url = url {
+                AsyncImage(url: url) { phase in
+                    switch phase {
+                    case .empty:
+                        ProgressView()
+                        //                        .frame(width: width, height: height)
+                        //                        .frame(maxWidth: width == nil ? .infinity : nil)
+                        //                        .clipShape(.rect(cornerRadius: cornerRadius))
+                    case .success(let image):
+                        image.resizable()
+                        //                        .aspectRatio(contentMode: .fill)
+                        //                        .frame(width: width, height: height)
+                        //                        .frame(maxWidth: width == nil ? .infinity : nil)
+                            .clipShape(.rect(cornerRadius: cornerRadius))
+                    case .failure:
+                        Image("NoImage")
+                            .resizable()
+                        //                        .aspectRatio(contentMode: .fill)
+                        //                        .frame(width: width, height: height)
+                        //                        .frame(maxWidth: width == nil ? .infinity : nil)
+                            .clipShape(.rect(cornerRadius: cornerRadius))
+                    default:
+                        Image("NoImage")
+                            .resizable()
+                        //                        .aspectRatio(contentMode: .fill)
+                        //                        .frame(width: width, height: height)
+                        //                        .frame(maxWidth: width == nil ? .infinity : nil)
+                            .clipShape(.rect(cornerRadius: cornerRadius))
+                    }
                 }
+            } else {
+                Image("NoImage")
+                    .resizable()
             }
-        } else {
-            Image("NoImage")
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(width: width, height: height)
-                .frame(maxWidth: width == nil ? .infinity : nil)
-                .clipShape(.rect(cornerRadius: cornerRadius))
-        }
+        }.aspectRatio(contentMode: .fill)
+            .frame(width: width, height: height)
+            .frame(maxWidth: width == nil ? .infinity : nil)
+            .clipShape(.rect(cornerRadius: cornerRadius))
     }
 }
 

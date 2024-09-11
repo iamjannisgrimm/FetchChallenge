@@ -11,6 +11,7 @@ struct ErrorView: View {
     public var errorMessage: String
     
     var body: some View {
+    
         VStack {
             Text("Something went wrong")
                 .fontWeight(.medium)

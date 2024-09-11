@@ -10,7 +10,6 @@
 		AFB2F1532C8113C40005603A /* FetchChallengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB2F1522C8113C40005603A /* FetchChallengeApp.swift */; };
 		AFB2F1572C8113C60005603A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFB2F1562C8113C60005603A /* Assets.xcassets */; };
 		AFB2F15B2C8113C60005603A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFB2F15A2C8113C60005603A /* Preview Assets.xcassets */; };
-		AFB2F1652C8113C60005603A /* FetchChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB2F1642C8113C60005603A /* FetchChallengeTests.swift */; };
 		AFB2F16F2C8113C60005603A /* FetchChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB2F16E2C8113C60005603A /* FetchChallengeUITests.swift */; };
 		AFB2F1712C8113C60005603A /* FetchChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB2F1702C8113C60005603A /* FetchChallengeUITestsLaunchTests.swift */; };
 		AFB2F17F2C8113F90005603A /* String+Clean.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB2F17D2C8113F90005603A /* String+Clean.swift */; };
@@ -55,7 +54,6 @@
 		AFB2F1582C8113C60005603A /* FetchChallenge.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FetchChallenge.entitlements; sourceTree = "<group>"; };
 		AFB2F15A2C8113C60005603A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AFB2F1602C8113C60005603A /* FetchChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FetchChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AFB2F1642C8113C60005603A /* FetchChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchChallengeTests.swift; sourceTree = "<group>"; };
 		AFB2F16A2C8113C60005603A /* FetchChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FetchChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFB2F16E2C8113C60005603A /* FetchChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchChallengeUITests.swift; sourceTree = "<group>"; };
 		AFB2F1702C8113C60005603A /* FetchChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -150,7 +148,6 @@
 		AFB2F1632C8113C60005603A /* FetchChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
-				AFB2F1642C8113C60005603A /* FetchChallengeTests.swift */,
 				AFB2F1972C8115740005603A /* MealDecodingTests.swift */,
 				AFB2F1982C8115740005603A /* MealDetailDecodingTests.swift */,
 				AFB2F1992C8115750005603A /* NetworkProviderTests.swift */,
@@ -373,7 +370,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFB2F1652C8113C60005603A /* FetchChallengeTests.swift in Sources */,
 				AFB2F19C2C8115750005603A /* NetworkProviderTests.swift in Sources */,
 				AFB2F19B2C8115750005603A /* MealDetailDecodingTests.swift in Sources */,
 				AFB2F19A2C8115750005603A /* MealDecodingTests.swift in Sources */,

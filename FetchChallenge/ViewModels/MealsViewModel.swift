@@ -8,10 +8,9 @@
 import SwiftUI
 import Observation
 
-//Dive deeper into @Observable
 //@MainActor
 @Observable class MealsViewModel {
-    var meals: [Meal] = []
+    private var meals: [Meal] = []
     var state: MealState = .loading
     var searchText: String = ""
     var selectedCategory: Category = .dessert
