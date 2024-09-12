@@ -27,12 +27,7 @@ struct Meal: Decodable {
         self.name = try container.decodeIfPresent(String.self, forKey: .name)?.cleaned ?? ""
         
         // Decode thumbnail URL if present
-        if let thumbnailString = try container.decodeIfPresent(String.self, forKey: .thumbnailURL),
-           let validURL = URL(string: thumbnailString) {
-            self.thumbnailURL = validURL
-        } else {
-            self.thumbnailURL = nil
-        }
+        self.thumbnailURL = try URL(string: container.decodeIfPresent(String.self, forKey: .thumbnailURL) ?? "")
     }
 }
 

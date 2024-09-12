@@ -31,12 +31,7 @@ struct MealDetail: Decodable {
         self.instructions = try container.decodeIfPresent(String.self, forKey: .instructions)?.cleaned
         
         // Decode thumbnail URL if present
-        if let mealThumb = try container.decodeIfPresent(String.self, forKey: .mealThumb),
-           let validURL = URL(string: mealThumb) {
-            self.mealThumb = validURL
-        } else {
-            self.mealThumb = nil
-        }
+        self.mealThumb = try URL(string: container.decodeIfPresent(String.self, forKey: .mealThumb) ?? "")
 
         // Dynamically decode ingredients
         let dynamicContainer = try decoder.container(keyedBy: DynamicCodingKeys.self)

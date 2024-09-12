@@ -9,7 +9,7 @@ import SwiftUI
 import Observation
 
 //@MainActor
-@Observable class MealsViewModel {
+@Observable class MealsViewModel: ObservableObject {
     private var meals: [Meal] = []
     var state: MealState = .loading
     var searchText: String = ""
@@ -42,7 +42,6 @@ import Observation
     
     func fetchMeals() async {
         state = .loading
-        
         do {
             meals = try await networkProvider.fetchMeals(for: selectedCategory.rawValue)
             state = .success

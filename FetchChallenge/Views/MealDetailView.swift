@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MealDetailView: View {
-    @State var viewModel = MealDetailViewModel()
+    @StateObject var viewModel = MealDetailViewModel()
     var meal: Meal
     
     var body: some View {
@@ -102,7 +102,7 @@ struct MealDetailView: View {
                 "strMeasure1": "",
                 "strIngredient2": "Sugar",
                 "strMeasure2": "1 tsp",
-                "strIngredient3": "",
+                "strIngredient3": "Salt",
                 "strMeasure3": ""
             }
         ]

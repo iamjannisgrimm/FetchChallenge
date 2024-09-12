@@ -62,23 +62,3 @@ class NetworkProviderTests: XCTestCase {
 
 }
 
-import Foundation
-
-class MockSession: Session {
-    var data: Data?
-    var response: URLResponse?
-    var error: Error?
-    
-    init(data: Data? = nil, response: URLResponse? = nil, error: Error? = nil) {
-        self.data = data
-        self.response = response
-        self.error = error
-    }
-    
-    func data(for request: URLRequest, delegate: (any URLSessionDelegate)?) async throws -> (Data, URLResponse) {
-        if let error = error {
-            throw error
-        }
-        return (data ?? Data(), response ?? URLResponse())
-    }
-}

@@ -8,7 +8,7 @@
 import SwiftUI
 import Observation
 
-@Observable class MealDetailViewModel {
+@Observable class MealDetailViewModel: ObservableObject {
     var mealDetails: MealDetail? = nil
     var state: MealDetailState = .loading
     
@@ -22,12 +22,6 @@ import Observation
         self.state = .loading
         do {
             let meal = try await networkProvider.fetchMealDetails(id: id)
-            
-            // Check if the fetched meal's ID matches the ID that was passed
-            if meal.id != id {
-                self.state = .error("The meal ID retrieved from the server does not match the expected ID")
-                return
-            }
             self.mealDetails = meal
             self.state = .success
         } catch {

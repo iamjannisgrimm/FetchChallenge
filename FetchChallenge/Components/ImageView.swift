@@ -20,29 +20,11 @@ struct ImageView: View {
                     switch phase {
                     case .empty:
                         ProgressView()
-                        //                        .frame(width: width, height: height)
-                        //                        .frame(maxWidth: width == nil ? .infinity : nil)
-                        //                        .clipShape(.rect(cornerRadius: cornerRadius))
                     case .success(let image):
                         image.resizable()
-                        //                        .aspectRatio(contentMode: .fill)
-                        //                        .frame(width: width, height: height)
-                        //                        .frame(maxWidth: width == nil ? .infinity : nil)
-                            .clipShape(.rect(cornerRadius: cornerRadius))
-                    case .failure:
-                        Image("NoImage")
-                            .resizable()
-                        //                        .aspectRatio(contentMode: .fill)
-                        //                        .frame(width: width, height: height)
-                        //                        .frame(maxWidth: width == nil ? .infinity : nil)
-                            .clipShape(.rect(cornerRadius: cornerRadius))
                     default:
                         Image("NoImage")
                             .resizable()
-                        //                        .aspectRatio(contentMode: .fill)
-                        //                        .frame(width: width, height: height)
-                        //                        .frame(maxWidth: width == nil ? .infinity : nil)
-                            .clipShape(.rect(cornerRadius: cornerRadius))
                     }
                 }
             } else {
