@@ -30,7 +30,6 @@ import Observation
          if !searchText.isEmpty {
              filteredMeals = filteredMeals.filter { $0.name.localizedCaseInsensitiveContains(searchText) }
          }
-
          return filteredMeals
      }
 
