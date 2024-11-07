@@ -92,4 +92,4 @@ I wrote unit tests to cover both the networking layer and the decoding logic:
 
 ## Requirements
 
-This project was developed using Xcode 15.4 and tested on an iPhone 15 Pro running iOS 17.5. I also have a version ready developed in Xcode 16.1 beta 3 and tested on iPhone 15 Pro running iOS 18.1 beta 3. That version supports Swift 6 syntax and Swift Testing framework.
+This project was developed using Xcode 15.4 and tested on an iPhone 15 Pro running iOS 17.5. I also have a version developed in Xcode 16.1 beta 3 and tested on iPhone 15 Pro running iOS 18.1 beta 3. That version supports Swift 6 syntax and Swift Testing framework.
